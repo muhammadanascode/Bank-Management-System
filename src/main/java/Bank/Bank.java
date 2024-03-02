@@ -1,5 +1,6 @@
 package Bank;
 
+import Account.Account;
 import Transaction.Transaction;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -8,8 +9,6 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.bson.Document;
-
-import Account.Account;
 
 public class Bank {
 
@@ -225,8 +224,12 @@ public class Bank {
       }
     } catch (InputMismatchException e) {
       System.out.println("Invalid input. Please enter a valid numeric option.");
+      // Consume the remaining invalid input
+      sc.nextLine();
     } catch (Exception e) {
       System.out.println("An error occurred: " + e.getMessage());
+      // Consume the remaining invalid input
+      sc.nextLine();
     }
   }
 
