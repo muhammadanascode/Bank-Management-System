@@ -8,7 +8,8 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import org.bson.Document;
-import package1.Account;
+
+import Account.Account;
 
 public class Bank {
 
